@@ -10,7 +10,7 @@ function getAlbums () {
     });
 };
 
-function getAlbumsById () {
+function getAlbumsById (id) {
     return db.one(`
     select * from album where id = ${id}`)
     .catch((err) =>{
@@ -28,7 +28,7 @@ function getArtist () {
     });
 };
 
-function getArtistById () {
+function getArtistById (id) {
     return db.one(`
     select * from artist where id = ${id}`)
     .catch((err) =>{
@@ -46,7 +46,7 @@ function getSong () {
     });
 };
 
-function getSongId () {
+function getSongId (id) {
     return db.one(`
     select * from song where id = ${id}`)
     .catch((err) =>{
@@ -64,7 +64,7 @@ function getSongWriter () {
     });
 };
 
-function getSongWriterId () {
+function getSongWriterId (id) {
     return db.one(`
     select * from song_writer where id = ${id}`)
     .catch((err) =>{
